@@ -129,7 +129,8 @@ a:hover{
         text-overflow: ellipsis;
     }
     .fl-table thead th {
-        text-align: left;
+        width: 65px;
+        text-align: center;
         border-bottom: 1px solid #f7f7f9;
     }
     .fl-table tbody tr {
@@ -142,10 +143,12 @@ a:hover{
         background: transparent;
     }
     .fl-table tr td:nth-child(odd) {
+        width: 125px;
         background: #F8F8F8;
         border-right: 1px solid #E6E4E4;
     }
     .fl-table tr td:nth-child(even) {
+        width: 125px;
         border-right: 1px solid #E6E4E4;
     }
     .fl-table tbody td {
