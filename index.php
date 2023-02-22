@@ -42,7 +42,7 @@ if($sql -> rowCount() > 0){
                 <td> <?=$usuario['idade'];?> </td>
                 <td>
                     <a href="editar.php?id=<?=$usuario['id'];?>">[ Editar ]</a>
-                    <a href="excluir.php?id=<?=$usuario['id'];?>">[ Excluir ]</a>
+                    <a href="excluir.php?id=<?=$usuario['id'];?>" id="excluir-<?=$usuario['id'];?>" class="btn-excluir">[ Excluir ]</a>
                 </td>
             </tr>
         <?php endforeach;?>
@@ -51,4 +51,24 @@ if($sql -> rowCount() > 0){
     <div class="btn-bottom">
         <a href="cadastrar.php">Cadastrar Usuário</a>
     </div>
+
+    <script>
+    // Seleciona todos os links de Excluir
+    const btnsExcluir = document.querySelectorAll('.btn-excluir');
+
+    // Adiciona um evento de clique a cada botão Excluir
+    btnsExcluir.forEach(btn => {
+        btn.onclick = function(event) {
+            // Impede que o link execute sua ação padrão de redirecionar para a página de exclusão
+            event.preventDefault();
+
+            // Exibe um alerta para confirmar se o usuário deseja excluir o registro
+            if (confirm('Tem certeza que deseja excluir este usuário?')) {
+                // Se o usuário clicar em OK, redireciona para a página de exclusão
+                window.location.href = btn.href;
+            }
+        }
+    });
+</script>
+
 </div>
