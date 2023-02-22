@@ -19,15 +19,14 @@ if($nome && $email && $idade){
         $sql -> bindValue(':email',$email);
         $sql -> bindValue(':idade',$idade);
         $sql -> execute();
-        
-        header('Location: index.php');
+
+        echo '<script>alert("Usuário cadastrado com sucesso!"); window.location.href = "index.php";</script>';
         exit;
     }else{
         header("Location: cadastrar.php");
+        exit;
     }
 }else{
     header("Location:cadastrar.php");
     exit;
 }
-
-

@@ -33,7 +33,7 @@
                 </label>
 
                 <div class="btn-save">
-                    <input type="submit" value="Salvar">
+                    <input type="submit" value="Salvar" id="btnSalvar">
                 </div>
                 
                 <p>*Ao clicar em salvar, você será direcionado a listagem de usuários.</p>
