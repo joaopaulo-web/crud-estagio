@@ -43,7 +43,7 @@ h1{
     text-decoration: underline;
 }
 .table-wrapper{
-    margin: 10px 70px 70px;
+    margin: 54px 70px 70px;
 }
 
 .fl-table {
@@ -92,10 +92,14 @@ a:hover{
 }
 @media (max-width: 767px) {
     .fl-table {
+        margin-top: -34px;
         display: block;
         width: 100%;
     }
     .table-wrapper:before{
+        position: absolute;
+        top: 105px;
+        left: 300px;
         content: "Arraste para ver mais >";
         display: block;
         text-align: right;
