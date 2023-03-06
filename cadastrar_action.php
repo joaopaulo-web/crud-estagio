@@ -23,8 +23,7 @@ if ($nome && $email && $idade) {
             echo '<script>alert("Usuário cadastrado com sucesso!"); window.location.href = "index.php";</script>';
             exit;
         } else {
-            header("Location: cadastrar.php");
-            exit;
+            echo '<script>alert("ERRO: Email duplicado"); window.location.href = "index.php";</script>';
         }
     } else {
         header("Location: cadastrar.php");
