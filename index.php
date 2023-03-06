@@ -64,7 +64,6 @@ if($sql -> rowCount() > 0){
 
             
             if (confirm('Tem certeza que deseja excluir este usuário?')) {
-            
                 window.location.href = btn.href;
             }
         }
